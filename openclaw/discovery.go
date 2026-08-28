@@ -31,9 +31,10 @@ type Adapter struct {
 }
 
 type Config struct {
-	GatewayURL string
-	HomeDir    string
-	HTTPClient *http.Client
+	GatewayURL   string
+	GatewayToken string
+	HomeDir      string
+	HTTPClient   *http.Client
 }
 
 func New(config Config) *Adapter {
@@ -897,6 +898,9 @@ func (a *Adapter) healthOK(ctx context.Context, endpoint string) bool {
 func (a *Adapter) discoverToken() (string, string, error) {
 	if token := strings.TrimSpace(os.Getenv("OPENCLAW_GATEWAY_TOKEN")); token != "" {
 		return token, "env OPENCLAW_GATEWAY_TOKEN", nil
+	}
+	if token := strings.TrimSpace(a.Config.GatewayToken); token != "" {
+		return token, "configured gateway token", nil
 	}
 	root, err := openclawHome(a.Config.HomeDir)
 	if err != nil {

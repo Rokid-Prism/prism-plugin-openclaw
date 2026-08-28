@@ -1,3 +1,5 @@
+github.com/Rokid-Prism/prism-plugin-sdk v0.1.0 h1:kVSzhH9TGnNGeykmQOzfU8SAPvSHYpBzp5JDduFw/Nc=
+github.com/Rokid-Prism/prism-plugin-sdk v0.1.0/go.mod h1:IRFNU7Aaz4IoGq1rJHSit2Pjig5c576ekAxv39OdxbA=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
 github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/gorilla/websocket v1.5.3 h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg=

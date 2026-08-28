@@ -119,7 +119,7 @@ func paramKey(method string, p map[string]any) (string, bool) {
 // returning the given fake client. Lets tests exercise buildDetailSnapshot,
 // ControlSession and ResolveApproval without any network.
 func adapterWithFake(fake *fakeRPCClient) *Adapter {
-	a := New(Config{GatewayURL: "http://127.0.0.1:18789"})
+	a := New(Config{GatewayURL: "http://127.0.0.1:18789", GatewayToken: "test-token"})
 	a.dial = func(ctx context.Context, cfg gatewayClientConfig) (rpcClient, error) {
 		return fake, nil
 	}
