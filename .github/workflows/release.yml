@@ -27,6 +27,9 @@ jobs:
     env:
       PRISM_PLATFORM: ${{ matrix.target }}
       GOPROXY: https://goproxy.cn,direct
+      # The immutable public SDK tag is newer than the public checksum index;
+      # keep Go's proxy fallback while avoiding a false negative from sumdb.
+      GONOSUMDB: github.com/Rokid-Prism/*
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
