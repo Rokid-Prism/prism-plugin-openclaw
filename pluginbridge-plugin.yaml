@@ -1,10 +1,11 @@
 id: openclaw
+schema_version: 1
 display_name: OpenClaw
 icon_url: https://registry.npmmirror.com/@lobehub/icons-static-avatar/latest/files/avatars/openclaw.webp
 icon_svg_url: https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/openclaw.svg
 description: Connects Prism to the OpenClaw gateway protocol with native session listing, history reads, and bidirectional runtime sync.
 version: 0.2.2
-protocol_version: "4"
+plugin_protocol_version: "4"
 min_hub_version: 0.1.0
 integration_mode: protocol-native
 transport: process
