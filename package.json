@@ -1,0 +1,12 @@
+{
+  "id": "openclaw",
+  "name": "OpenClaw Native Adapter",
+  "version": "0.2.2",
+  "publisher": "rokid-official",
+  "type": "pluginbridge-plugin",
+  "entry": "pluginbridge-plugin.yaml",
+  "build": {
+    "command": ["go", "build", "-o", "./bin/openclaw-adapter", "./cmd/openclaw-adapter"]
+  },
+  "license": "MIT"
+}

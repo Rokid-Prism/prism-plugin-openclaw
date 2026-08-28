@@ -1,0 +1,40 @@
+id: openclaw
+schema_version: 1
+display_name: OpenClaw
+icon_url: https://registry.npmmirror.com/@lobehub/icons-static-avatar/latest/files/avatars/openclaw.webp
+icon_svg_url: https://registry.npmmirror.com/@lobehub/icons-static-svg/latest/files/icons/openclaw.svg
+description: Connects Prism to the OpenClaw gateway protocol with native session listing, history reads, and bidirectional runtime sync.
+version: 0.2.2
+plugin_protocol_version: "4"
+min_hub_version: 0.1.0
+integration_mode: protocol-native
+transport: process
+mode: native
+runtime_modes: [native]
+default_runtime_mode: native
+runtime_controls:
+  native:
+    model: stable
+    reasoning: stable
+runtime_operations:
+  native:
+    rename: direct
+    pin: direct
+    archive: direct
+    delete: direct
+command: ["./bin/openclaw-adapter"]
+capabilities:
+  native_visible_input: true
+  native_visible_output: true
+  can_attach_session: true
+  can_start_session_with_message: true
+  can_list_sessions: true
+  can_read_history: true
+  can_interrupt: true
+  can_approval: true
+  can_forward_sync: true
+  can_reverse_sync: true
+  can_plugin_wide_watch: true
+  can_wait_run: true
+  can_read_status: true
+  can_control_session: true
