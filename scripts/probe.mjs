@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
-import { resolve } from "node:path";
+import { extname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
@@ -10,6 +10,7 @@ const raw = manifest.match(/^command:\s*(\[[^\n]+\])$/m)?.[1];
 if (!id || !raw) throw new Error("invalid manifest command");
 const command = JSON.parse(raw).map((part) => part === "${runtime.node}" ? process.execPath : part);
 if (command[0].startsWith("./")) command[0] = resolve(root, command[0]);
+if (process.platform === "win32" && extname(command[0]) === "") command[0] += ".exe";
 const child = spawn(command[0], command.slice(1), { cwd: root, stdio: ["pipe", "pipe", "pipe"] });
 let stderr = "";
 child.stderr.setEncoding("utf8");
