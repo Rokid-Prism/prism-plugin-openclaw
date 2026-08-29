@@ -44,7 +44,7 @@ jobs:
       - name: Build and test on this target
         run: |
           go test ./...
-          go build -o ./bin/openclaw-adapter ./cmd/openclaw-adapter
+          go build -o ./bin/openclaw-adapter${{ runner.os == 'Windows' && '.exe' || '' }} ./cmd/openclaw-adapter
       - name: Verify manifest and release version
         shell: bash
         run: node scripts/verify-release.mjs
