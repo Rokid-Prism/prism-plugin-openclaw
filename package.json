@@ -6,7 +6,7 @@
   "type": "pluginbridge-plugin",
   "entry": "pluginbridge-plugin.yaml",
   "build": {
-    "command": ["go", "build", "-o", "./bin/openclaw-adapter", "./cmd/openclaw-adapter"]
+    "command": ["go", "build", "-o", "./bin/prism-plugin-openclaw", "./cmd/openclaw-adapter"]
   },
   "license": "MIT"
 }

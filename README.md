@@ -49,10 +49,10 @@ Repo development only:
 
 ```sh
 go test ./...
-go build -o ./bin/openclaw-adapter ./cmd/openclaw-adapter
+go build -o ./bin/prism-plugin-openclaw ./cmd/openclaw-adapter
 ```
 
-The repository validates OpenClaw directly with Go tests; release packaging builds `./bin/openclaw-adapter` from `cmd/openclaw-adapter`.
+The repository validates OpenClaw directly with Go tests; release packaging builds `./bin/prism-plugin-openclaw` from `cmd/openclaw-adapter`.
 The runtime launcher never compiles source on the user's machine. It starts the
 packaged binary directly and fails explicitly if that artifact is missing;
 developers must run the build command above after changing Go source.

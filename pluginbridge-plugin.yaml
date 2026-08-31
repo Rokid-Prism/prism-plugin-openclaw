@@ -22,7 +22,7 @@ runtime_operations:
     pin: direct
     archive: direct
     delete: direct
-command: ["./bin/openclaw-adapter"]
+command: ["./bin/prism-plugin-openclaw"]
 capabilities:
   native_visible_input: true
   native_visible_output: true
