@@ -2,3 +2,22 @@ node_modules/
 release/
 bin/
 *.tgz
+
+# Go build and test artifacts
+coverage.out
+coverage/
+*.test
+
+# Local runtime and tooling artifacts
+.openclaw/
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.log
